@@ -15,6 +15,18 @@ from code.helper import prepare_symptoms_array
 import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
+import streamlit.components.v1 as components
+
+hide_streamlit_style = """
+    <style>
+   
+    footer {visibility: hidden;}
+    .css-1v3fvcr {visibility: hidden;}
+    header {visibility: hidden;}
+    .css-1v3fvcr {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # loading the models
 diabetes_model = joblib.load("models/diabetes_model.sav")
